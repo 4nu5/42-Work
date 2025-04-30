@@ -46,9 +46,9 @@ int ft_pre_digits(char *str, int *ptr_sign)
 
     i = 0;
     sign = 1;
-    while(str[i] >= 9 || str[i] <= 13 || str[i] == ' ')
+    while((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
     i++;
-    while(str[i] && str[i] == '-' || str[i] == '+')
+    while(str[i] && (str[i] == '-' || str[i] == '+'))
     {
         if(str[i] == '-')
         sign *= -1;
